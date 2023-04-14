@@ -1,17 +1,14 @@
+import whiteCards from "@/data/white-cards";
 import styles from "@/styles/Hero.module.scss";
+import { config } from "@/utils/config";
+import WhiteCard from "./WhiteCard";
 
 const Hero = () => {
-  const myVariable = process.env.MY_VARIABLE;
-
-  const logToken = () => {
-    console.log(process.env.GITHUB_TOKEN);
-    console.log(myVariable);
-  };
-
   return (
     <div className="container">
       <h1>Hero</h1>
-      <button onClick={logToken}>log token</button>
+
+      <WhiteCard title={whiteCards[26]} />
     </div>
   );
 };

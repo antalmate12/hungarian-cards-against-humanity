@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-
       <SuggestCard />
     </main>
   );
