@@ -1,9 +1,24 @@
+import ts from "typescript";
+
 const WhatIsThis = () => {
   const helloDemo = () => {
-    // Call the "hello" edge function
-    fetch("/api/create-github-issue").then((data) => {
-      console.log(data);
-    });
+    // POST to "/api/create-github-issue" with a title and body
+    fetch("/api/create-github-issue", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: "Hello Demo",
+        body: `# First line
+        
+        ## Second line
+  
+        `,
+      }),
+    })
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -22,7 +37,9 @@ const WhatIsThis = () => {
         válaszolnak.
       </p>
 
-      <button onClick={helloDemo}>asd</button>
+      <button className="bg-red-500 px-12 py-4" onClick={helloDemo}>
+        asd
+      </button>
     </div>
   );
 };
