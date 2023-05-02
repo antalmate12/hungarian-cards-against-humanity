@@ -26,7 +26,7 @@ export default function handler(
   fetch(apiUrl, {
     method: "POST",
     headers: {
-      Authorization: `token ${token}`,
+      Authorization: `Bearer ${token}`,
     },
     body,
   })
