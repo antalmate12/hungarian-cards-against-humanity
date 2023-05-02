@@ -1,4 +1,13 @@
 const WhatIsThis = () => {
+  const helloDemo = () => {
+    // Call the "hello" edge function
+    fetch("/api/create-github-issue")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div className="container">
       <p>Ahogy azt a játék eredeti készítői írják:</p>
@@ -14,6 +23,8 @@ const WhatIsThis = () => {
         fekete kártyáról, a többiek pedig a legviccesebb fehér kártyáikkal
         válaszolnak.
       </p>
+
+      <button onClick={helloDemo}>asd</button>
     </div>
   );
 };
