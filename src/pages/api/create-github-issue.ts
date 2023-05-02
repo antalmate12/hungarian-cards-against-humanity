@@ -30,7 +30,6 @@ export default function handler(
     },
     body,
   })
-    .then((response) => response.json())
     .then((data) => {
       res.status(200).json(data);
     })

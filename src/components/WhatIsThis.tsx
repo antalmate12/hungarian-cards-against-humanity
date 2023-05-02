@@ -1,11 +1,9 @@
 const WhatIsThis = () => {
   const helloDemo = () => {
     // Call the "hello" edge function
-    fetch("/api/create-github-issue")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+    fetch("/api/create-github-issue").then((data) => {
+      console.log(data);
+    });
   };
 
   return (
