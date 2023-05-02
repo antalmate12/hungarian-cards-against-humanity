@@ -5,7 +5,7 @@ const WhiteCard = ({
   className,
 }: {
   title: string;
-  className: string;
+  className?: string;
 }) => {
   return (
     <div className={[styles.WhiteCard, className ?? ""].join(" ")}>
