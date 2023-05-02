@@ -16,7 +16,7 @@ export default function handler(
 
   // use octokit to create an issue
   const octokit = new Octokit({
-    auth: "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",
+    auth: token,
   });
 
   // get the issue title and body from the request body
