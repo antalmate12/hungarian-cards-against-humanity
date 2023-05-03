@@ -1,4 +1,4 @@
-![](public\cah-cover.png)
+![](./public/cah-cover.png)
 
 # Emberiség Ellenes Kártyák
 
