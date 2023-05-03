@@ -1,4 +1,4 @@
-![](C:\Users\antal\WebstormProjects\hungarian-cards-against-humanity\public\cah-cover.png)
+![](public\cah-cover.png)
 
 # Emberiség Ellenes Kártyák
 
