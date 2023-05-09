@@ -1,5 +1,5 @@
-import WhiteCard from "@/components/WhiteCard";
-import whiteCards from "@/data/white-cards";
+import WhiteCard from "../../app/components/WhiteCard";
+import whiteCards from "../data/white-cards";
 
 const WhiteCards = () => {
   return (

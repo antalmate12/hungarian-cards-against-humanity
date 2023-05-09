@@ -1,4 +1,6 @@
-import createGitHubIssue from "@/utils/createGitHubIssue";
+"use client";
+
+import createGitHubIssue from "../../lib/utils/createGitHubIssue";
 import { Switch } from "@headlessui/react";
 import { useRef, useState } from "react";
 

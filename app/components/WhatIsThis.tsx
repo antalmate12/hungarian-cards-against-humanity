@@ -1,4 +1,4 @@
-import ts from "typescript";
+"use client";
 
 const WhatIsThis = () => {
   const helloDemo = () => {
