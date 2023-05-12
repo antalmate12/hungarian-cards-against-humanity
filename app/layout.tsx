@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "../lib/styles/globals.scss";
 import { Inter, Roboto } from "next/font/google";
 
-export const roboto = Roboto({
+const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
