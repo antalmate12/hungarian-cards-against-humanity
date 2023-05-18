@@ -1,3 +1,5 @@
+import { Card } from "src/utils/models/card";
+
 export const whiteCards = [
   "Öregemberszag.",
   "Mikropénisz.",
@@ -371,8 +373,6 @@ export const whiteCards = [
   "Felcsút.",
   "Lézer János.",
 ];
-
-import Card from "@/utils/models/card";
 
 const newWhiteCards: Card[] = [];
 
