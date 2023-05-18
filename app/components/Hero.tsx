@@ -1,8 +1,10 @@
-import whiteCards from "@/data/white-cards";
+"use client";
+
+import whiteCards from "../../lib/data/white-cards";
 import styles from "@/styles/Hero.module.scss";
-import { config } from "@/utils/config";
+import { config } from "../../lib/utils/config";
 import WhiteCard from "./WhiteCard";
-import blackCards from "@/data/black-cards";
+import blackCards from "../../lib/data/black-cards";
 import BlackCard from "./BlackCard";
 import { useEffect, useId, useRef, useState } from "react";
 
