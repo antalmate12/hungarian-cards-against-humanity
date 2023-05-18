@@ -90,7 +90,7 @@ const Hero = () => {
 
   return (
     <div className="container min-h-screen grid place-items-center">
-      <h1 className={styles.HeroTitle}>Emberiség Ellenes kártyák</h1>
+      <h1 className={styles.HeroTitle}>Emberiségellenes kártyák</h1>
 
       <div className={styles.CardsHolder}>
         {selectedWhiteCards?.map((selectedWhiteCard, index) => (
