@@ -372,4 +372,8 @@ export const whiteCards = [
   "Lézer János.",
 ];
 
+import Card from "@/utils/models/card";
+
+const newWhiteCards: Card[] = [];
+
 export default whiteCards;
