@@ -7,6 +7,7 @@ import WhiteCard from "./WhiteCard";
 import blackCards from "../../lib/data/black-cards";
 import BlackCard from "./BlackCard";
 import { useEffect, useId, useRef, useState } from "react";
+import useCards from "@/hooks/useCards";
 
 const Hero = () => {
   const [selectedBlackCard, setSelectedBlackCard] = useState<string>();
@@ -18,6 +19,8 @@ const Hero = () => {
   const [blackCardId, setBlackCardId] = useState<string>(
     (+new Date()).toString()
   );
+
+  const { getRandomCard, selectMultipleRandomCards } = useCards();
 
   const addShakeToBlackCard = () => {
     setBlackCardClasses((prevBlackCardClasses) => [
@@ -36,19 +39,10 @@ const Hero = () => {
 
   useEffect(() => {
     // Set the selected black card to a random black card
-    setSelectedBlackCard(
-      blackCards[Math.floor(Math.random() * blackCards.length)]
-    );
+    setSelectedBlackCard(getRandomCard("black"));
 
     // Select 4 random white cards
-    const newSelectedWhiteCards: string[] = [];
-    for (let i = 0; i < 4; i++) {
-      const newSelectedWhiteCard =
-        whiteCards[Math.floor(Math.random() * whiteCards.length)];
-      newSelectedWhiteCards.push(newSelectedWhiteCard);
-    }
-
-    setSelectedWhiteCards(newSelectedWhiteCards);
+    setSelectedWhiteCards(selectMultipleRandomCards("white", 4));
   }, []);
 
   useEffect(() => {

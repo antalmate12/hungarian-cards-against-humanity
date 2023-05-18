@@ -1,9 +1,6 @@
 import { Card } from "src/utils/models/card";
 
 export const whiteCards = [
-  "Öregemberszag.",
-  "Mikropénisz.",
-  "Használt bugyik.",
   "Osztály-sznob felhangok.",
   "Leszarni Baranyát",
   "Telefonszex.",
@@ -374,6 +371,25 @@ export const whiteCards = [
   "Lézer János.",
 ];
 
-const newWhiteCards: Card[] = [];
+const newWhiteCards: Card[] = [
+  {
+    type: "white",
+    title: "Öregemberszag",
+    category: "common",
+    tags: [],
+  },
+  {
+    type: "white",
+    title: "Mikropénisz",
+    category: "sex",
+    tags: ["penis"],
+  },
+  {
+    type: "white",
+    title: "Használt bugyik",
+    category: "sex",
+    tags: [],
+  },
+];
 
 export default whiteCards;
