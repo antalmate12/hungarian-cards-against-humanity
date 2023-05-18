@@ -39,8 +39,46 @@ export default function useCards() {
 
   //
 
+  /**
+   * Returns an array of cards that contains the given text
+   * @param text - the text to search for
+   * @param type - the type of the card (white or black)
+   * @returns
+   */
+  const searchCard = (text: string, type?: CardType): string[] => {
+    const foundCards: string[] = [];
+
+    if (type === "white") {
+      whiteCards.forEach((card) => {
+        if (card.includes(text)) {
+          foundCards.push(card);
+        }
+      });
+    } else if (type === "black") {
+      blackCards.forEach((card) => {
+        if (card.includes(text)) {
+          foundCards.push(card);
+        }
+      });
+    } else {
+      whiteCards.forEach((card) => {
+        if (card.includes(text)) {
+          foundCards.push(card);
+        }
+      });
+      blackCards.forEach((card) => {
+        if (card.includes(text)) {
+          foundCards.push(card);
+        }
+      });
+    }
+
+    return foundCards;
+  };
+
   return {
     getRandomCard,
     selectMultipleRandomCards,
+    searchCard,
   };
 }
